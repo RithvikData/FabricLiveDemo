@@ -10,7 +10,7 @@
               "type": "DelimitedTextReadSettings"
             },
             "storeSettings": {
-              "type": "LakehouseReadSettings",
+              "type": "AzureBlobStorageReadSettings",
               "recursive": true,
               "enablePartitionDiscovery": false
             },
@@ -60,16 +60,16 @@
               },
               "schema": [],
               "connectionSettings": {
-                "name": "SalesDemoDW",
+                "name": "f6c3de50_17d4_492f_929b_d0fad9146964",
                 "properties": {
                   "type": "DataWarehouse",
                   "typeProperties": {
-                    "artifactId": "689c0b95-2801-a83d-45cb-3cad3433316a",
-                    "endpoint": "5xcs7x7kpcvevar77xqwdhf644-ifowytbd6tretcs2ehwsrhqgmu.datawarehouse.fabric.microsoft.com",
-                    "workspaceId": "00000000-0000-0000-0000-000000000000"
+                    "artifactId": "@pipeline().libraryVariables.DynamicaOption_WarehouseId",
+                    "endpoint": "@pipeline().libraryVariables.DynamicaOption_SQLConnectionString",
+                    "workspaceId": "@pipeline().libraryVariables.DynamicaOption_WorkspaceId"
                   },
                   "externalReferences": {
-                    "connection": "ea8c902f-c51f-4154-8456-25cb5782d40b"
+                    "connection": "@pipeline().libraryVariables.DynamicaOption_ConnectionId"
                   },
                   "annotations": []
                 }
@@ -97,6 +97,28 @@
         "name": "Data Load",
         "dependsOn": []
       }
-    ]
+    ],
+    "libraryVariables": {
+      "DynamicaOption_ConnectionId": {
+        "type": "String",
+        "variableName": "ConnectionId",
+        "libraryName": "DynamicaOption"
+      },
+      "DynamicaOption_WorkspaceId": {
+        "type": "String",
+        "variableName": "WorkspaceId",
+        "libraryName": "DynamicaOption"
+      },
+      "DynamicaOption_WarehouseId": {
+        "type": "String",
+        "variableName": "WarehouseId",
+        "libraryName": "DynamicaOption"
+      },
+      "DynamicaOption_SQLConnectionString": {
+        "type": "String",
+        "variableName": "SQLConnectionString",
+        "libraryName": "DynamicaOption"
+      }
+    }
   }
 }

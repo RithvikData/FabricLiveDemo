@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/variables/1.0.0/schema.json",
+  "variables": [
+    {
+      "name": "ConnectionId",
+      "note": "",
+      "type": "String",
+      "value": "ea8c902f-c51f-4154-8456-25cb5782d40b"
+    },
+    {
+      "name": "WorkspaceId",
+      "note": "",
+      "type": "String",
+      "value": "4c6c5d41-f423-49e2-8a5a-21ed289e0665"
+    },
+    {
+      "name": "WarehouseId",
+      "note": "",
+      "type": "String",
+      "value": "3433316a-3cad-45cb-a83d-2801689c0b95"
+    },
+    {
+      "name": "SQLConnectionString",
+      "note": "",
+      "type": "String",
+      "value": "5xcs7x7kpcvevar77xqwdhf644-ifowytbd6tretcs2ehwsrhqgmu.datawarehouse.fabric.microsoft.com"
+    }
+  ]
+}

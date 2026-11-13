@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "VariableLibrary",
+    "displayName": "DynamicaOption"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0f85bbb1-2515-b6f4-425a-ed4699b8e8c6"
+  }
+}
